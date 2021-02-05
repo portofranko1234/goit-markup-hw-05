@@ -24,7 +24,9 @@
           >
           <ul class="flex-list">
             <li class="flex-list-item">
-              <a class="nav-links current" href="./index.html">Студия</a>
+              <a class="nav-links current studio-underline" href="./index.html"
+                >Студия</a
+              >
             </li>
             <li class="flex-list-item">
               <a class="nav-links" href="./portfolio.html"> Портфолио </a>
@@ -56,13 +58,10 @@
     </header>
     <main>
       <section class="hero">
-        <div class="hero-description">
-          <h1 class="solutions">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
-          <button type="button" class="services">Заказать услугу</button>
-        </div>
+        <h1 class="solutions">Эффективные решения для вашего бизнеса</h1>
+        <button type="button" class="services" data-modal-open>
+          Заказать услугу
+        </button>
       </section>
 
       <section class="main-part">
@@ -128,28 +127,37 @@
         <div class="container">
           <ul class="doings-list">
             <li class="doings-images">
-              <img
-                src="./doings/img-1.jpg"
-                width="370"
-                height="294"
-                alt="работа за компьютером"
-              />
+              <div class="img-wrapper">
+                <img
+                  src="./doings/img-1.jpg"
+                  width="370"
+                  height="294"
+                  alt="работа за компьютером"
+                />
+                <p class="img-subtitles">Десктопные приложения</p>
+              </div>
             </li>
             <li class="doings-images">
-              <img
-                src="./doings/img-2.jpg"
-                width="370"
-                height="294"
-                alt="выбор дизайна разного вида"
-              />
+              <div class="img-wrapper">
+                <img
+                  src="./doings/img-2.jpg"
+                  width="370"
+                  height="294"
+                  alt="выбор дизайна разного вида"
+                />
+                <p class="img-subtitles">Мобильные приложения</p>
+              </div>
             </li>
             <li class="doings-images">
-              <img
-                src="./doings/img-3.jpg"
-                width="370"
-                height="294"
-                alt="диаграма цветов на планшете"
-              />
+              <div class="img-wrapper">
+                <img
+                  src="./doings/img-3.jpg"
+                  width="370"
+                  height="294"
+                  alt="диаграма цветов на планшете"
+                />
+                <p class="img-subtitles">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -444,5 +452,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-button" data-modal-close>
+          <svg class="close-button-svg">
+            <use href="./icons/sprite-svg.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
