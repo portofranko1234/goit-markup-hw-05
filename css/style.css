@@ -117,7 +117,7 @@ img {
   color: var(--accent-color);
 }
 
-.studio-underline::before {
+.studio-underline::after {
   position: absolute;
   bottom: 0;
   content: '';
